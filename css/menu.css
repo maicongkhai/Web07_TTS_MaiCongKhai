@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+}
+
+.sidebar-left {
+    width: 180px;
+    position: absolute;
+    height: 100vh;
+    background-color: #1f2937;
+    transition: 0.5s;
+}
+
+.sidebar-left .logo {
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.sidebar-left .logo .b-logo {
+    /* height: 24px;
+    width: 24px; */
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -1157px -32px;
+    width: 16px;
+    height: 16px;
+    /* background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
+    margin-left: 16px;
+    /* background-color: white; */
+    cursor: pointer;
+}
+
+.sidebar-left .logo .m-logo {
+    margin-left: 16px;
+    width: 100px;
+    height: 40px;
+    background-image: url(../library/img/Logo_Module_TiengViet_White.66947422.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sidebar-left .menu .menu-item {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar-left .menu .menu-item:hover {
+    background-color: #ccc;
+}
+
+.sidebar-left .menu .menu-item .menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-size: contain;
+    margin-left: 16px;
+    color: #1f2937;
+}
+
+.sidebar-left .menu .menu-item .text-item {
+    color: white;
+}
+
+.sidebar-left .menu .menu-item .menu-item-dasbord {
+    /* background-image: url('../library/img/dashboard.png'); */
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -33px -1630px;
+    width: 18px;
+    height: 20px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-cash {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -78px -1631px;
+    width: 14px;
+    height: 18px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-diposit {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -121px -1633px;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-purchase {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -165px -1632px;
+    width: 16px;
+    height: 18px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-sell {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -206px -1631px;
+    width: 20px;
+    height: 14px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-order {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -254px -1632px;
+    width: 14px;
+    height: 17px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-wasehouse {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -294px -1632px;
+    width: 18px;
+    height: 17px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-tool {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -339px -1633px;
+    width: 18px;
+    height: 17px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-assets {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -382px -1632px;
+    width: 17px;
+    height: 18px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-tax {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -427px -1634px;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-price {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -471px -1633px;
+    width: 17px;
+    height: 17px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-synthetic {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -514px -1632px;
+    width: 16px;
+    height: 18px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-budget {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -165px -1632px;
+    width: 16px;
+    height: 18px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-report {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -552px -1636px;
+    width: 14px;
+    height: 13px;
+}
+
+.sidebar-left .menu .menu-item .menu-item-analysis {
+    background: url('../library/img/Sprites.64af8f61.svg') no-repeat -592px -1631px;
+    width: 20px;
+    height: 18px;
+}
+
+
+/* @media screen and (max-width: 991.9px) {
+    .sidbar_left {
+        left: -320px;
+    }
+    .header {
+        margin-left: 0;
+    }
+} */

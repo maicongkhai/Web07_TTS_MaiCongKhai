@@ -1,0 +1,160 @@
+.dialog-note {
+    width: 600px;
+    height: 300px;
+    border: 3px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.align-item {
+    align-items: center;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: #FFFF33;
+}
+
+.blue {
+    color: blue;
+}
+
+
+/* .top-note {
+    height: 50%;
+} */
+
+.note {
+    width: 552px;
+    height: 252px;
+    margin: 24px;
+}
+
+.item-note {
+    /* width: 452px; */
+    height: 100px;
+    padding: 24px;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    border-bottom: 1px solid #777;
+}
+
+
+/* i>.fas {
+    background-color: #000;
+} */
+
+.item-note>i {
+    font-size: 60px;
+}
+
+.item-note>p {
+    margin-left: 24px;
+    font-size: 20px;
+}
+
+.item-note p>a {
+    text-decoration: none;
+    color: black;
+}
+
+.bottom-note {
+    display: flex;
+    position: relative;
+}
+
+.bottom-close {
+    display: flex;
+    justify-content: center;
+}
+
+.button-edit {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.button-edit>button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #777;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.button-close {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: center;
+}
+
+.button-agree {
+    position: absolute;
+    /* width: 452px; */
+    height: 100px;
+    display: flex;
+    right: 0;
+    align-items: center;
+}
+
+.button-close>button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #777;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+}
+
+.button-agree>button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #777;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+}
+
+.button-question {
+    position: absolute;
+    /* width: 452px; */
+    height: 100px;
+    display: flex;
+    right: 0;
+    align-items: center;
+}
+
+.button-question>button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #777;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 16px;
+}
+
+#no-question {
+    background-color: white;
+    color: black;
+}
+
+#yes-question {
+    background-color: green;
+}

@@ -1,0 +1,129 @@
+.header {
+    height: 50px;
+    margin-left: 180px;
+    border-bottom: 1px solid #ccc;
+    transition: 0.5s;
+}
+
+.header .header-left {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    float: left;
+}
+
+.header .header-left #btn_hide_sidebar {
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+}
+
+.header .header-left #btn_hide_sidebar:hover {
+    background-color: #ccc;
+}
+
+
+/* .header .header-left .text-header {
+    margin-left: 16px;
+}
+
+.header .header-left .text-header>select {
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 550;
+} */
+
+
+/* .header .header-left .text-header>select:active {
+    border: none;
+} */
+
+.header .header-left .b-button-header {
+    margin-left: 10px;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.header .header-left .text-header {
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 550;
+    margin-left: 16px;
+}
+
+.header .header-right {
+    display: flex;
+    height: 49px;
+    right: 0;
+    align-items: center;
+    position: absolute;
+}
+
+.header .header-right .bell-btn {
+    margin-right: 24px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.header .header-right .bell-btn>i {
+    font-size: 25px;
+}
+
+.header .header-right .avatar {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header-right .avatar>i {
+    font-size: 35px;
+    color: #ccc;
+}
+
+.header .header-right .name {
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.header .header-right .btn {
+    margin-right: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.header .header-right .btn:hover {
+    background-color: #ccc;
+}
+
+.dropdown-header {
+    width: 100px;
+    height: 300px;
+    background-color: red;
+}

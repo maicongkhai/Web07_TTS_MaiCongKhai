@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí nhân viên</title>
+    <!-- <link link rel="stylesheet" href="../library/fonts/notosans-bold.3ede5aff.woff2"> -->
+
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/content.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog-note.css">
+    <link rel="stylesheet" href="../library/font/fontawesome-5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar-left">
+        <div class="logo">
+            <div class="b-logo">
+                <!-- <img src="../library/img/toggle.png"> -->
+            </div>
+            <div class="m-logo"></div>
+        </div>
+        <div class="menu">
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-dasbord"> </div>
+                <div class="text-item">Tổng quan</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-cash"> </div>
+                <div class="text-item">Tiền mặt</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-diposit"> </div>
+                <div class="text-item">Tiền gửi</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-purchase"> </div>
+                <div class="text-item">Mua hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-sell"> </div>
+                <div class="text-item">Bán hàng</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-order"> </div>
+                <div class="text-item">Quản lí hóa đơn</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-wasehouse"> </div>
+                <div class="text-item">Kho</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-tool"> </div>
+                <div class="text-item">Công cụ dụng cụ</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-assets"> </div>
+                <div class="text-item">Tài sản cố định</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-tax"> </div>
+                <div class="text-item">Thuế</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-price"> </div>
+                <div class="text-item">Giá thành</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-synthetic"> </div>
+                <div class="text-item">Tổng hợp</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-budget"> </div>
+                <div class="text-item">Ngân sách</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-report"> </div>
+                <div class="text-item">Báo cáo</div>
+            </div>
+            <div class="menu-item">
+                <div class=" menu-icon menu-item-analysis"> </div>
+                <div class="text-item">Phân tích tài chính</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="right">
+
+    </div> -->
+    <div class="header">
+        <div class="header-left">
+            <button type="button" class="a-button-header" id="btn_hide_sidebar"> <i class="fas fa-bars"></i></button>
+            <!-- <div class="text-header">
+                <select>
+                    <option>Công ty tnhh sản xuất - thương mại - dịch vụ qui phúc</option>
+                </select>
+            </div> -->
+            <div class="text-header">Công ty tnhh sản xuất - thương mại - dịch vụ qui phúc</div>
+            <button class="b-button-header"> <i class="fas fa-chevron-down"></i></button>
+            <!-- <div class="dropdown-header"></div> -->
+        </div>
+        <div class="header-right">
+            <button class="bell-btn"><i class="far fa-bell"></i></button>
+            <div class="avatar"><i class="fas fa-user-circle"></i></div>
+            <div class="name">Nguyễn Văn Mạnh</div>
+            <button class="btn"><i class="fas fa-chevron-down"></i></button>
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="name-content">Nhân viên</div>
+        <div class="btn-content">
+            <button id="btnAddOnClick">Thêm mới nhân viên</button>
+        </div>
+        <div class="detail-content">
+            <div class="one-detail">
+                <div class="right-detail-content">
+                    <div class="search">
+                        <input type="text" name="keyword" placeholder="Tìm theo mã,tên nhân viên" class="input-search">
+                        <button class="btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="back"><i class="fas fa-redo"></i></div>
+                </div>
+            </div>
+            <div class="two-detail">
+                <div class="table-content">
+                    <table class="table">
+                        <thead>
+                            <th>
+                                <input type="checkbox" disabled>
+                            </th>
+                            <th>Mã nhân viên</th>
+                            <th>Tên nhân viên</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>Số CMND</th>
+                            <th>Chức danh</th>
+                            <th>Tên đơn vị</th>
+                            <th>Số tài khoản</th>
+                            <th>Tên ngân hàng</th>
+                            <th>Chi nhánh tk ngân hàng</th>
+                            <th>Chức năng</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00012</td>
+                                <td>NGuyễn Văn Liệt</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">31/12/1969</td>
+                                <td>1233538756</td>
+                                <td>Trưởng nhóm</td>
+                                <td>Xay Keo- Trộn bột</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>000579</td>
+                                <td>Lưu Thủy Bình</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">3/5/1989</td>
+
+                                <td></td>
+                                <td>Trưởng nhóm</td>
+                                <td>Vận hành tại Hà Nội</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00083</td>
+                                <td>NGuyễn Văn Vũ</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">01/01/1993</td>
+                                <td>385699268</td>
+                                <td>Nhân viên</td>
+                                <td>Xay Keo- Trộn bột</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00013</td>
+                                <td>Đinh Văn Long</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">15/08/1990</td>
+                                <td>141992130</td>
+                                <td>Trưởng Ca</td>
+                                <td>Xưởng ép(Ca A Long)</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00014</td>
+                                <td>NGuyễn Viết Diện</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">01/04/1969</td>
+                                <td></td>
+                                <td></td>
+                                <td>Ban Quản Lí PX Inox</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00035</td>
+                                <td>Lê Trung Khánh</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">31/01/1969</td>
+                                <td>1233538756</td>
+                                <td>Trưởng nhóm</td>
+                                <td>Xay Keo- Trộn bột</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>000102</td>
+                                <td>Nông Thị Vân</td>
+                                <td>Nữ</td>
+                                <td class="text-align-center">2/9/1987</td>
+                                <td>034862589297</td>
+                                <td>Nhân Viên</td>
+                                <td>Vận hành tại Hà Nội</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00084</td>
+                                <td>Tống Thị Sinh</td>
+                                <td>Nữ</td>
+                                <td class="text-align-center">01/01/1993</td>
+                                <td>385699268</td>
+                                <td>Nhân viên</td>
+                                <td>Xay Keo- Trộn bột</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00037</td>
+                                <td>Nguyễn Tất Thắng</td>
+                                <td>Nam</td>
+                                <td class="text-align-center">14/08/1992</td>
+                                <td>141992130</td>
+                                <td>Trưởng Ca</td>
+                                <td>Xưởng ép</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+
+                                </td>
+                                <td>00015</td>
+                                <td>NGuyễn Thị Linh</td>
+                                <td>Nữ</td>
+                                <td class="text-align-center">30/04/1977</td>
+                                <td></td>
+                                <td>Nhân Viên</td>
+                                <td>Xưởng ép</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-align-center">
+                                    <div class="dropdown">
+                                        <div class="dropdown-select">
+                                            <button id="btn-repair">Sửa</button>
+                                            <button id="btn-dropdown"><i class="fas fa-caret-down"></i></button>
+
+                                        </div>
+                                        <div id="drop" hidden>
+                                            <ul class="dropdown-list">
+                                                <li class="dropdown-item" id="copy">Nhân Bản</li>
+                                                <li class="dropdown-item" id="delete">Xóa</li>
+                                                <li class="dropdown-item" id="close">Ngừng sử dụng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="three-detail">
+                <div class="bottom-left">
+                    <div class="text-bottom">
+                        <p>Tổng số:</p>
+                        <a href="#">1035</a>
+                        <p>bản ghi</p>
+                    </div>
+                </div>
+                <div class="bottom-right">
+                    <div class=" input-bottom">
+                        <div class="dropdown-bottom" hidden>
+                            <div class="item-page">10 bản ghi trên 1 trang</div>
+                            <div class="item-page">20 bản ghi trên 1 trang</div>
+                            <div class="item-page">30 bản ghi trên 1 trang</div>
+                            <div class="item-page">50 bản ghi trên 1 trang</div>
+                            <div class="item-page">100 bản ghi trên 1 trang</div>
+                        </div>
+                        <p>20 bản ghi trên 1 trang</p>
+                        <button id="btn-page"><i class="fas fa-caret-down"></i></button>
+
+                    </div>
+                    <div class=" next-bottom">
+                        <div class="string"><a href="#">Trước</a></div>
+                        <div class="number"> <button>1</button></div>
+                        <div class="number"> <button>2</button></div>
+                        <div class="number"> <button>3</button></div>
+                        <div class="number"> <button>...</button></div>
+                        <div class="number"> <button>52</button></div>
+                        <div class="string"><a href="#">Sau</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" id="id-dialog" hidden>
+        <div class="modal"></div>
+
+        <div class="dialog-content">
+            <div class="header-dialog">
+                <div class="name-left">
+                    <div class="text">Thông tin nhân viên</div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <lable>Là khách hàng</lable>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <lable>Là nhà cung cấp</lable>
+                    </div>
+                </div>
+                <div class="btn-right">
+                    <button><i class="far fa-question-circle"></i></button>
+                    <button id="btnDeleteOnClick"><i class="fas fa-times"></i></button>
+
+                </div>
+            </div>
+            <div class="center-dialog">
+                <div class="one-center">
+                    <div class="a-one">
+                        <div class="leftA-one">
+                            <div class="item-dialog">
+                                <label>Mã : (<i style="color: red; font-size: 15px;">*</i> )</label>
+                                <br/>
+                                <input type="text" placeholder="   NV-1644" required id="EmployeeCode" />
+                            </div>
+                        </div>
+                        <div class="rightA-one">
+                            <div class="item-name-dialog">
+                                <label>Tên : (<i style="color: red; font-size: 15px;">*</i> )</label>
+                                <br/>
+                                <input type="text" placeholder="   Nguyễn Văn Mạnh" required id="FullName" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-one">
+                        <div class="centerB-one">
+                            <label>Đơn vị : (<i style="color: red; font-size: 15px;">*</i> )</label>
+                            <br>
+                            <div class="combobox-info">
+                                <select id="txtDepartmentName" class="combobox-input" name="department" required>
+                                    <option value=""></option>
+                                    <option value="1">Phòng đào tạo</option>
+                                    <option value="2 ">Phòng nhân sự</option>
+                                    <option value="3">Phòng Marketing</option>
+                                    <option value="4">Phòng công nghệ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-one">
+                        <div class="itemC-dialog padding24">
+                            <label>Chức danh:</label>
+                            <br/>
+                            <input type="text" placeholder="   Lễ tân chính" />
+                        </div>
+                    </div>
+                </div>
+                <div class="two-center">
+                    <div class="a-two">
+                        <div class="leftA-two">
+                            <div class="itemDate padding10">
+                                <label>Ngày sinh:</label>
+                                <br/>
+                                <input type="date" placeholder="11/08/1989" value="11/08/1989" min="01/01/1900" max="01/01/2120" class=" text-box-default textbox-with-icon" dateInput id="dateOfBirth">
+                            </div>
+                        </div>
+                        <div class="rightA-two">
+                            <div class="itemGender padding10">
+                                <label>Giới tính:</label>
+                                <br/>
+                                <div class="input-gender">
+                                    <div class="input-radio"><input type="radio" id="radio-1" name="radio"> <label for="radio-1">Nam</label></div>
+                                    <div class="input-radio"><input type="radio" id="radio-2" name="radio"> <label for="radio-2">Nữ</label></div>
+                                    <div class="input-radio"><input type="radio" id="radio-3" name="radio"> <label for="radio-3">Khác</label></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-two">
+                        <div class="leftB-two">
+                            <div class="itemIndentity padding10">
+                                <label>Số CMND:</label>
+                                <br/>
+                                <input type="text" placeholder="   6013758468" />
+                            </div>
+                        </div>
+                        <div class="rightB-two">
+                            <div class="itemDate padding10">
+                                <label>Ngày cấp:</label>
+                                <br/>
+                                <input type="date" value="11/08/1989" min="01/01/1900" max="01/01/2120" class=" text-box-default textbox-with-icon" dateInput id="dateOfBirth">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-two">
+                        <div class="itemC-dialog padding10">
+                            <label>Nơi cấp:</label>
+                            <br/>
+                            <input type="text" placeholder="Hải phòng   " />
+                        </div>
+                    </div>
+                </div>
+                <div class="three-center">
+                    <div class="itemAddress padding24">
+                        <label>Địa chỉ:</label>
+                        <br/>
+                        <input type="text" placeholder="   146 Phạm Văn Chiêu" />
+                    </div>
+                </div>
+                <div class="four-center">
+                    <div class="item-four">
+                        <div class="four-top">
+                            <div class="itemOne padding24">
+                                <label>ĐT di động:</label>
+                                <br/>
+                                <input type="text" placeholder="   0963579744" />
+                            </div>
+                        </div>
+                        <div class="four-bottom">
+                            <div class="itemOne padding24">
+                                <label>Tài khoản ngân hàng:</label>
+                                <br/>
+                                <input type="text" placeholder="   944147" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-four">
+                        <div class="four-top">
+                            <div class="itemOne padding24">
+                                <label>ĐT cố định:</label>
+                                <br/>
+                                <input type="text" placeholder="   (764) 749-6478" />
+                            </div>
+                        </div>
+                        <div class="four-bottom">
+                            <div class="itemOne padding24">
+                                <label>Tên ngân hàng:</label>
+                                <br/>
+                                <input type="text" placeholder="   Ngân hàng Vietcombank" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-four">
+                        <div class="four-top">
+                            <div class="itemOne padding24">
+                                <label>Email:</label>
+                                <br/>
+                                <input type="text" placeholder="   procuon856@example.com" />
+                            </div>
+                        </div>
+                        <div class="four-bottom">
+                            <div class="itemOne padding24">
+                                <label>Chi nhánh:</label>
+                                <br/>
+                                <input type="text" placeholder="   Chi nhánh 6" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-dialog">
+                <div class="one-bottom">
+                    <div class="left-bottom-dialog"> <button class="btn-small" id="btn-delete-dialog">Hủy</button></div>
+                    <div class="right-bottom-dialog">
+                        <div class="item-save">
+                            <button class="btn-small" id="btn-edit-dialog">Cất</button>
+                            <button class="btn-big" id="btn-save">Cất và Thêm</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" hidden>
+        <div class="modal"></div>
+        <div class="dialog-note">
+            <div class="note">
+                <div class="item-note">
+                    <i class="fas fa-exclamation-triangle orange"></i>
+                    <p>Mã nhân viên <a href="#"> NV-0001 </a> đã tồn tại trong hệ thống vui lòng kiếm tra lại.</p>
+                </div>
+                <div class="bottom-note">
+                    <div class="button-agree">
+                        <button>Đồng ý</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" hidden id="delete-tr">
+        <div class="modal"></div>
+        <div class="dialog-note">
+            <div class="note">
+                <div class="item-note">
+                    <i class="fas fa-exclamation-triangle orange"></i>
+                    <p>Bạn có thực sự muốn xóa nhân viên <a href="#"> NV-0001 </a> không?</p>
+                </div>
+                <div class="bottom-note">
+                    <div class="button-edit">
+                        <button id="no-tr">Không</button>
+                    </div>
+                    <div class="button-agree">
+                        <button id="yes-tr">Có</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" hidden>
+        <div class="modal"></div>
+        <div class="dialog-note">
+            <div class="note">
+                <div class="item-note">
+                    <i class="fas fa-exclamation-circle red"></i>
+                    <p>Tên không được để trống</p>
+                </div>
+                <div class="bottom-close">
+                    <div class="button-close">
+                        <button>Đóng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" id="question" hidden>
+        <div class="modal"></div>
+        <div class="dialog-note">
+            <div class="note">
+                <div class="item-note">
+                    <i class="far fa-question-circle blue"></i>
+                    <p>Dữ liệu đã bị thay đổi.Bạn có muốn cất không?</p>
+                </div>
+                <div class="bottom-note">
+                    <div class="button-edit">
+                        <button id="delete-question">Hủy</button>
+                    </div>
+                    <div class="button-question ">
+                        <button id="no-question">Không</button>
+                        <button id="yes-question">Có</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog" id="modal" hidden>
+        <div class="modal"></div>
+
+    </div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/script.js"></script>
+
+</html>
